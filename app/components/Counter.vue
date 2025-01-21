@@ -1,29 +1,27 @@
 <template>
   <div>
-    <h3>Counter: {{ count }}</h3>
-    <button @click="increment">
-      Increment
-    </button>
-    <button @click="decrement">
-      Decrement
-    </button>
+    <h3 class="text-3xl">Counter: {{ count }}</h3>
+    <div class="space-x-4">
+      <button @click="increment" class="btn">Increment</button>
+      <button @click="decrement" class="btn">Decrement</button>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-const count = ref(0)
+const count = ref(0);
 
 const increment = () => {
-  count.value++
-}
+  count.value++;
+};
 
 const decrement = () => {
-  count.value--
-}
+  count.value--;
+};
 </script>
 
-<style scoped>
-button {
-  margin: 5px;
+<style>
+.btn {
+  @apply bg-blue-500 text-white px-4 py-2 rounded;
 }
 </style>

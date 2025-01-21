@@ -1,5 +1,5 @@
 <template>
-  <div class="alert" :style="{ 'border-color': color }">
+  <div class="alert bg-green-500" :style="{ 'border-color': color }">
     <slot></slot>
   </div>
 </template>
@@ -8,9 +8,9 @@
 const { color } = defineProps({
   color: {
     type: String,
-    default: 'orange'
-  }
-})
+    default: "orange",
+  },
+});
 </script>
 
 <style scoped>
@@ -20,7 +20,6 @@ const { color } = defineProps({
   padding: 1rem;
   border: 2px solid;
   border-radius: 0.5rem;
-  background-color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
